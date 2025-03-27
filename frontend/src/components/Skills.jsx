@@ -32,15 +32,15 @@ const OTHERSSKILLSLOGO = [
 export default function Skills() {
   return (
     <>
-      <section className="mb-10">
+      <section id="skills" className="pt-4 mb-10">
         <SectionTitle exploreText="View My" title="Skills" />
 
-        <div className="flex gap-8 h-[25rem]">
+        <div className="flex flex-col lg:flex-row gap-8 lg:h-[25rem] items-center">
           <SkillsCard skillsTitle="Frontend Development">
             {FRONTENDSKILLSLOGO.map((skill) => (
               <div
                 key={skill.label}
-                className="flex flex-col justify-center items-center"
+                className="flex flex-col justify-center items-center transition-all duration-300 hover:rotate-12"
               >
                 {skill.icon}
                 <span>{skill.label}</span>
@@ -52,7 +52,7 @@ export default function Skills() {
             {OTHERSSKILLSLOGO.map((skill) => (
               <div
                 key={skill.label}
-                className="flex flex-col justify-center items-center"
+                className="flex flex-col justify-center items-center transition-all duration-300 hover:rotate-12"
               >
                 {skill.icon}
                 <span>{skill.label}</span>
@@ -61,7 +61,7 @@ export default function Skills() {
           </SkillsCard>
         </div>
       </section>
-      <div className="absolute right-28">
+      <div className="absolute right-10 lg:right-28">
         <FaAnglesDown size="1.8rem" />
       </div>
     </>

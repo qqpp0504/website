@@ -9,7 +9,7 @@ import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
-    <div className="montserrat px-52 pt-14">
+    <div className="montserrat px-10 lg:px-52 pt-10">
       <header>
         <Navigation />
       </header>

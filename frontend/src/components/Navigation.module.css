@@ -1,0 +1,22 @@
+.line a {
+  position: relative;
+}
+
+.line a:hover {
+  color: #9ca3af;
+}
+
+.line a::after {
+  content: " ";
+  position: absolute;
+  right: 50%;
+  left: 50%;
+  bottom: -10px;
+  border-bottom: 2px solid #9ca3af;
+  transition: 0.3s;
+}
+
+.line a:hover::after {
+  right: 0%;
+  left: 0%;
+}

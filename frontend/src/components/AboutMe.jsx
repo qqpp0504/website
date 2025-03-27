@@ -1,18 +1,25 @@
+import { useEffect } from "react";
 import { IoSchool } from "react-icons/io5";
 import { FaAnglesDown } from "react-icons/fa6";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import myImage from "../assets/images/my-image2.jpg";
 import CardInfo from "./UI/CardInfo.jsx";
 import SectionTitle from "./UI/SectionTitle.jsx";
 
 export default function AboutMe() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
-      <section className="mb-10">
+      <section id="about" className="pt-4 mb-10" data-aos="fade-up">
         <SectionTitle exploreText="Get To Know More" title="About Me" />
 
-        <div className="flex gap-12">
-          <div className="w-[23rem] h-[23rem] rounded-4xl overflow-hidden">
+        <div className="flex flex-col lg:flex-row gap-12">
+          <div className="w-full sm:w-[23rem] sm:h-[23rem] rounded-4xl overflow-hidden mx-auto">
             <img
               src={myImage}
               alt="My image"
@@ -20,8 +27,8 @@ export default function AboutMe() {
             />
           </div>
 
-          <div className="w-[40rem]">
-            <div className="flex gap-7">
+          <div className="w-full sm:w-[25rem] lg:w-[40rem] mx-auto">
+            <div className="flex flex-col lg:flex-row gap-7">
               <CardInfo
                 icon={
                   <>
@@ -55,7 +62,7 @@ export default function AboutMe() {
           </div>
         </div>
       </section>
-      <div className="absolute right-28">
+      <div className="absolute right-10 lg:right-28">
         <FaAnglesDown size="1.8rem" />
       </div>
     </>

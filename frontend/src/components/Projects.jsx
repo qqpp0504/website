@@ -8,10 +8,10 @@ import ProjectCard from "./UI/ProjectCard.jsx";
 export default function Projects() {
   return (
     <>
-      <section className="mb-10">
+      <section id="projects" className="pt-4 mb-10">
         <SectionTitle exploreText="Browse My Recent" title="Projects" />
 
-        <div className="flex gap-8">
+        <div className="flex gap-8 flex-col lg:flex-row items-center">
           <ProjectCard
             projectImg={
               <img
@@ -21,6 +21,8 @@ export default function Projects() {
               />
             }
             projectName="SH SELECT Project"
+            projectGithub="https://github.com/qqpp0504/sh-select-project"
+            projectLink="https://qqpp0504.github.io/sh-select-project"
           />
           <ProjectCard
             projectImg={
@@ -31,10 +33,12 @@ export default function Projects() {
               />
             }
             projectName="nearbyX Project"
+            projectGithub="https://github.com/qqpp0504/nearbyX"
+            projectLink="https://qqpp0504.github.io/nearbyX"
           />
         </div>
       </section>
-      <div className="absolute right-28">
+      <div className="absolute right-10 lg:right-28">
         <FaAnglesDown size="1.8rem" />
       </div>
     </>
