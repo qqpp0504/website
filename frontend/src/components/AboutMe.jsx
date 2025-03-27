@@ -3,15 +3,13 @@ import { FaAnglesDown } from "react-icons/fa6";
 
 import myImage from "../assets/images/my-image2.jpg";
 import CardInfo from "./UI/CardInfo.jsx";
+import SectionTitle from "./UI/SectionTitle.jsx";
 
 export default function AboutMe() {
   return (
     <>
       <section className="mb-10">
-        <div className="text-center mb-24">
-          <div>Get To Know More</div>
-          <h2 className="font-bold text-4xl mt-3">About Me</h2>
-        </div>
+        <SectionTitle exploreText="Get To Know More" title="About Me" />
 
         <div className="flex gap-12">
           <div className="w-[23rem] h-[23rem] rounded-4xl overflow-hidden">
