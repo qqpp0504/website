@@ -1,10 +1,18 @@
 import "./App.css";
 import Navigation from "./components/Navigation.jsx";
+import StartInfo from "./components/StartInfo.jsx";
+import AboutMe from "./components/AboutMe.jsx";
 
 function App() {
   return (
-    <div className="montserrat">
-      <Navigation />
+    <div className="montserrat px-52 py-14">
+      <header>
+        <Navigation />
+      </header>
+      <main>
+        <StartInfo />
+        <AboutMe />
+      </main>
     </div>
   );
 }
