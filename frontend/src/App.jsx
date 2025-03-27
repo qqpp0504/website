@@ -5,10 +5,11 @@ import AboutMe from "./components/AboutMe.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
-    <div className="montserrat px-52 py-14">
+    <div className="montserrat px-52 pt-14">
       <header>
         <Navigation />
       </header>
@@ -19,6 +20,9 @@ function App() {
         <Projects />
         <Contact />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
