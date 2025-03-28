@@ -10,7 +10,7 @@ import SectionTitle from "./UI/SectionTitle.jsx";
 
 export default function AboutMe() {
   useEffect(() => {
-    AOS.init();
+    AOS.init({ duration: 1500 });
   }, []);
 
   return (
@@ -62,7 +62,7 @@ export default function AboutMe() {
           </div>
         </div>
       </section>
-      <div className="absolute right-10 lg:right-28">
+      <div className="absolute right-10 lg:right-28" data-aos="fade-up">
         <FaAnglesDown size="1.8rem" />
       </div>
     </>

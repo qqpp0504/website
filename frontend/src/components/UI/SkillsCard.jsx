@@ -14,7 +14,7 @@ const SKILLSLOGO = [
 
 export default function SkillsCard({ skillsTitle, children }) {
   return (
-    <div className="border-[1.5px] border-neutral-400 rounded-4xl p-8 flex flex-col gap-2 w-full sm:w-[25rem] h-full lg:w-1/2">
+    <div className="border-[1.5px] border-neutral-400 rounded-4xl p-8 flex flex-col gap-2 w-full sm:w-[25rem] h-full lg:w-1/2 shadow-lg">
       <span className="text-neutral-600 text-2xl font-bold mb-6 text-center">
         {skillsTitle}
       </span>

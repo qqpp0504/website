@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   FaHtml5,
   FaBootstrap,
@@ -9,6 +10,8 @@ import { FaCss3Alt, FaReact, FaGitAlt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiVite } from "react-icons/si";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import SectionTitle from "./UI/SectionTitle.jsx";
 import SkillsCard from "./UI/SkillsCard.jsx";
@@ -30,9 +33,13 @@ const OTHERSSKILLSLOGO = [
 ];
 
 export default function Skills() {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
+
   return (
     <>
-      <section id="skills" className="pt-4 mb-10">
+      <section id="skills" className="pt-4 mb-10" data-aos="fade-up">
         <SectionTitle exploreText="View My" title="Skills" />
 
         <div className="flex flex-col lg:flex-row gap-8 lg:h-[25rem] items-center">
@@ -61,7 +68,7 @@ export default function Skills() {
           </SkillsCard>
         </div>
       </section>
-      <div className="absolute right-10 lg:right-28">
+      <div className="absolute right-10 lg:right-28" data-aos="fade-up">
         <FaAnglesDown size="1.8rem" />
       </div>
     </>
